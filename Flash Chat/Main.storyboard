@@ -300,7 +300,7 @@
         <!--Chat-->
         <scene sceneID="F3e-gV-bnY">
             <objects>
-                <viewController title="Chat" id="dqX-XJ-muO" sceneMemberID="viewController">
+                <viewController title="Chat" id="dqX-XJ-muO" customClass="ChatViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rzS-dY-0R7"/>
                         <viewControllerLayoutGuide type="bottom" id="8sz-td-gTJ"/>

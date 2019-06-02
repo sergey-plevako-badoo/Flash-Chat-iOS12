@@ -63,6 +63,11 @@ class ConnectionsViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var chatController = segue.destination as! ChatViewController
+        chatController.chatName = "Chat Title"
+    }
+    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToChatto", sender: self)
     }
@@ -105,7 +110,6 @@ class ConnectionsViewController: UIViewController, UITableViewDelegate, UITableV
             self.messageTableView.reloadData()
         }
     }
-
     
     @IBAction func logOutPressed(_ sender: AnyObject) {
         

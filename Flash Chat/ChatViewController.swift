@@ -12,17 +12,44 @@ import Chatto
 import ChattoAdditions
 
 class ChatViewController: BaseChatViewController {
+    var chatName : String = ""
     
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var messageTextfield: UITextField!
+    
+    var chatInputPresenter: BasicChatInputBarPresenter!
+    override func createChatInputView() -> UIView {
+        let chatInputView = ChatInputBar.loadNib()
+        var appearance = ChatInputBarAppearance()
+        appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
+        appearance.textInputAppearance.placeholderText = NSLocalizedString("Type a message", comment: "")
+        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
+        chatInputView.maxCharactersCount = 1000
+        return chatInputView
+    }
+    
+    func createChatInputItems() -> [ChatInputItemProtocol] {
+        var items = [ChatInputItemProtocol]()
+        items.append(self.createTextInputItem())
+        return items
+    }
+    
+    private func createTextInputItem() -> TextChatInputItem {
+        let item = TextChatInputItem()
+        item.textInputHandler = { [weak self] text in
+            // Your handling logic
+        }
+        return item
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
 
     /*
     // MARK: - Navigation
