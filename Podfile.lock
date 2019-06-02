@@ -2,6 +2,9 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - Chatto (3.4.0)
+  - ChattoAdditions (3.4.0):
+    - Chatto
   - Firebase (6.1.0):
     - Firebase/Core (= 6.1.0)
   - Firebase/Auth (6.1.0):
@@ -77,6 +80,8 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework
+  - Chatto (= 3.4.0)
+  - ChattoAdditions (= 3.4.0)
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -85,6 +90,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ChameleonFramework
+    - Chatto
+    - ChattoAdditions
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -101,6 +108,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Chatto: c00cb1af4c57b797041ce77a115d4f535ec54991
+  ChattoAdditions: 24617c63386fbaf971f11514fdc748d37f66f093
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
   FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
   FirebaseAuth: 4281d6d98a90881e00710fa8d9e37c2ccdfc7d80
@@ -115,6 +124,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 28e6b606c94d500b8eb4ff26bbe800a80214d0ec
+PODFILE CHECKSUM: 0ade5297d8fb024a6fbecd8bfe21dfc1d749a339
 
 COCOAPODS: 1.7.0

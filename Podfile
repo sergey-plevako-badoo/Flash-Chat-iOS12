@@ -11,5 +11,7 @@ target 'Flash Chat' do
  pod 'Firebase/Database'
  pod 'SVProgressHUD'
  pod 'ChameleonFramework'
+ pod 'Chatto', '= 3.4.0'
+ pod 'ChattoAdditions', '= 3.4.0' # if you want to use the cells or the input component
 
 end
